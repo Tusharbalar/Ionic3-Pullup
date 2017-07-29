@@ -19,12 +19,14 @@ export class ContentDrawerComponent {
   bounceBack: boolean = true;
   thresholdTop: number = 200;
   thresholdBottom: number = 200;
-  showTitle: string = "click here to show";
+  title;
+  showTitle = "Custom Title Here";
+  hideTitle = "Custom Title Here";
 
   constructor(public element: ElementRef,
-    public renderer: Renderer,
-    public domCtrl: DomController,
-    public platform: Platform) {
+              public renderer: Renderer,
+              public domCtrl: DomController,
+              public platform: Platform) {
 
   }
 
@@ -57,8 +59,6 @@ export class ContentDrawerComponent {
     });
 
   }
-
-  title;
 
   handlePan(ev) {
 
