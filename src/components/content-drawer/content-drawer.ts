@@ -19,6 +19,7 @@ export class ContentDrawerComponent {
   bounceBack: boolean = true;
   thresholdTop: number = 200;
   thresholdBottom: number = 200;
+  showTitle: string = "click here to show";
 
   constructor(public element: ElementRef,
     public renderer: Renderer,
@@ -73,8 +74,10 @@ export class ContentDrawerComponent {
     }
 
     if ((newTop > this.thresholdTop && ev.additionalEvent === "panup") ||  bounceToBottom) {
-
+      console.log("1");
+      let inputElement = this.renderer.createElement(this.element.nativeElement, "input");
       this.domCtrl.write(() => {
+        this.renderer.setElementAttribute(inputElement, 'value', 'Hello from renderer');
         this.renderer.setElementStyle(this.element.nativeElement, 'transition', 'top 0.5s');
         this.renderer.setElementStyle(this.element.nativeElement, 'top', '0px');
       });

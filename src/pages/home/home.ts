@@ -16,7 +16,8 @@ export class HomePage {
             handleHeight: 50,
             thresholdFromBottom: 50,
             thresholdFromTop: 200,
-            bounceBack: true
+            bounceBack: true,
+            showTitle: "New"
         };
 
     }
