@@ -3,7 +3,7 @@
     page-home {
  
         content-drawer {
-            background-color: #f8f8f8 !important;
+            background-color: #2ec95c !important;
         }
  
         content-drawer .content {
@@ -12,4 +12,11 @@
  
     }
  
+}
+
+.custom {
+    .toolbar-background-ios {
+        background-color: #2ec95c !important;
+        color: #fff;
+    }
 }

@@ -58,12 +58,16 @@ export class ContentDrawerComponent {
 
   }
 
+  title;
+
   handlePan(ev) {
 
     let newTop = ev.center.y;
+    this.title = newTop > this.thresholdTop;
 
     let bounceToBottom = false;
     let bounceToTop = false;
+
     if (this.bounceBack && ev.isFinal) {
 
       let topDiff = newTop - this.thresholdTop;
@@ -74,10 +78,7 @@ export class ContentDrawerComponent {
     }
 
     if ((newTop > this.thresholdTop && ev.additionalEvent === "panup") ||  bounceToBottom) {
-      console.log("1");
-      let inputElement = this.renderer.createElement(this.element.nativeElement, "input");
       this.domCtrl.write(() => {
-        this.renderer.setElementAttribute(inputElement, 'value', 'Hello from renderer');
         this.renderer.setElementStyle(this.element.nativeElement, 'transition', 'top 0.5s');
         this.renderer.setElementStyle(this.element.nativeElement, 'top', '0px');
       });

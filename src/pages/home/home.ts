@@ -17,7 +17,8 @@ export class HomePage {
             thresholdFromBottom: 50,
             thresholdFromTop: 200,
             bounceBack: true,
-            showTitle: "New"
+            showTitle: "Click here to view charts",
+            hideTitle: "Close Modal"
         };
 
     }
