@@ -6,9 +6,18 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
+    drawerOptions: any;
 
-  constructor(public navCtrl: NavController) {
-
+ 
+    constructor(public navCtrl: NavController) {
+ 
+        this.drawerOptions = {
+            handleHeight: 50,
+            thresholdFromBottom: 50,
+            thresholdFromTop: 200,
+            bounceBack: true
+        };
+ 
   }
 
 }

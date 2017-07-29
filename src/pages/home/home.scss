@@ -1,3 +1,15 @@
-page-home {
-
+.ios, .md {
+ 
+    page-home {
+ 
+        content-drawer {
+            background-color: #f8f8f8 !important;
+        }
+ 
+        content-drawer .content {
+            padding: 20px;
+        }
+ 
+    }
+ 
 }
