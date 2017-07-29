@@ -14,10 +14,7 @@
 </ion-content>
 
 <content-drawer [options]="drawerOptions">
-  <div class="content">
-    The world is your oyster.
-    <p>
-      If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-    </p>
+  <div id="container" style="width:100%; height:400px;">
+    <chart [options]="chartOptions" type="chart" style="display:block"></chart>
   </div>
 </content-drawer>
